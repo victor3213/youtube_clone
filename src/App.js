@@ -10,6 +10,8 @@ import Feed from "./components/Feed"
 import ChannelDetail from './components/ChannelDetail';
 import SearchBar from './components/SearchBar';
 import SideBar from './components/SideBar';
+import Videos from './components/Videos';
+
 
 const App = () => {
   return (
@@ -19,7 +21,7 @@ const App = () => {
           <Routes>
             <Route path="/" exact element={<Feed />}/>
             <Route path="/video/:id" element={<VideoDetail />}/>
-            <Route path="/chanel/:id" element={<ChannelDetail />}/>
+            <Route path="/channel/:id" element={<ChannelDetail />}/>
             <Route path="/search/:searchTerm" element={<SearchFeed />}/>
           </Routes>
         </Box>

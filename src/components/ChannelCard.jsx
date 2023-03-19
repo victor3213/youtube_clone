@@ -8,7 +8,7 @@ import { display } from '@mui/system'
 
 
 
-const ChannelCard = ({channelDetail}) => {
+const ChannelCard = ({channelDetail, marginTop}) => {
   return (
     <Box
         sx={{
@@ -22,11 +22,12 @@ const ChannelCard = ({channelDetail}) => {
                 md: '320px'
             },
             height: '325px',
-            margin: 'auto'
+            margin: 'auto',
+            marginTop: marginTop
         }}
     >
         
-        <Link to={`/channel/${channelDetail.id.channelId}`}>
+        <Link to={`/channel/${channelDetail?.id?.channelId}`}>
             <CardContent sx={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -35,8 +36,8 @@ const ChannelCard = ({channelDetail}) => {
                 color: '#fff'
             }}>
                 <CardMedia 
-                    image={channelDetail.snippet.thumbnails.high.url || demoProfilePicture}
-                    alt={channelDetail.snippet.title}
+                    image={channelDetail?.snippet?.thumbnails?.high?.url || demoProfilePicture}
+                    alt={channelDetail?.snippet?.title}
                     sx={{
                         borderRadius: '50%',
                         height: '180px',
@@ -46,7 +47,7 @@ const ChannelCard = ({channelDetail}) => {
                     }}
                 />
                 <Typography variant='h6'>
-                    {channelDetail.snippet.title}
+                    {channelDetail?.snippet?.title}
                     <CheckCircle 
                         sx={{
                             fontSize: 14, 
