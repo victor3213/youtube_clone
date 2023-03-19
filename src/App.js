@@ -8,6 +8,8 @@ import VideoDetail from "./components/VideoDetail"
 import SearchFeed from "./components/SearchFeed"
 import Feed from "./components/Feed"
 import ChannelDetail from './components/ChannelDetail';
+import SearchBar from './components/SearchBar';
+
 
 const App = () => {
   return (
